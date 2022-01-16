@@ -1,6 +1,6 @@
 function App() {
   return (
-    <p>Página principal</p>
+    <h1>Página principal</h1>
   );
 }
 
