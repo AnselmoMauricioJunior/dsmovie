@@ -1,4 +1,3 @@
-import './styles.css'
 import { useParams} from 'react-router-dom'
 import FormCard from 'components/FormCard';
 
