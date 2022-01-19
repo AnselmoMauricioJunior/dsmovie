@@ -28,20 +28,24 @@ function Listing() {
                 setPage(data);
             });
     }, [pageNumber]);
+
+    const handlePageChange = (newPageNumber: number)=>  {
+        setPageNumber(newPageNumber);
+    }
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageChange}/>
 
             <div className="container">
                 <div className="row">
                     {
-                        page.content.map(item => {
+                        page.content.map(item => 
                             (
                                 <div key={item.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
                                     <MovieCard movie={item} />
                                 </div>
                             )
-                        })
+                        )
                     }
 
                 </div>
