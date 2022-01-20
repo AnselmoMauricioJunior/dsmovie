@@ -2,6 +2,7 @@ package com.devsuperior.dsmovie.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +18,7 @@ public class ScoreController {
 	private ScoreService service;
 
 	@PutMapping
-	public MovieDTO saveScore(ScoreDTO dto) {
+	public MovieDTO saveScore(@RequestBody ScoreDTO dto) {
 		MovieDTO moviedto = service.saveScore(dto);
 		return moviedto;
 	}
